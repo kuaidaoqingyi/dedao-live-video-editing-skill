@@ -1,0 +1,74 @@
+project:
+  id: "YYYYMMDD-topic-slug"
+  title: ""
+  owner: ""
+  status: "ingest"
+  working_dir: ""
+  delivery_dir: ""
+
+source:
+  original_video: ""
+  raw_link: "media/raw.mp4"
+  duration: ""
+  width: 1080
+  height: 1920
+  fps: 30
+  orientation: "vertical"
+  do_not_copy_original: true
+
+goal:
+  platform: ""
+  target_duration: "5-10 min"
+  audience: ""
+  story_type: ""
+  desired_emotion: ""
+  conversion_goal: ""
+
+glossary:
+  people:
+    - canonical: ""
+      aliases: []
+      pronoun: ""
+  works:
+    - canonical: ""
+      aliases: []
+  locations:
+    - canonical: ""
+      aliases: []
+  common_asr_errors:
+    - wrong: ""
+      correct: ""
+
+asr:
+  provider: ""
+  raw_json: "notes/raw-transcript.json"
+  raw_srt: "notes/raw-transcript.srt"
+  corrected_srt: "subtitles.srt"
+
+story:
+  candidate_windows: "notes/candidate-windows.md"
+  cut_plan: "cut-plan.md"
+  edit_notes: "edit-notes.md"
+  required_context: []
+  must_keep: []
+  must_remove: []
+
+visuals:
+  cover_style_refs: []
+  cover_candidates_dir: "frames/cover-options"
+  assets: []
+
+render:
+  engine: "HyperFrames"
+  composition: "index.html"
+  latest_version: ""
+  latest_render: ""
+  versions_dir: "renders/versions"
+
+qa:
+  ffprobe_checked: false
+  subtitle_checked: false
+  visual_checked: false
+  audio_checked: false
+  notes: ""
+
