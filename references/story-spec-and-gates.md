@@ -24,6 +24,19 @@ Translate them into concrete decisions:
 - where subtitles, PIP, cover text, and silence should go
 - what the viewer should feel or do after the scene
 
+## Flow Weight Gate
+
+Start by choosing the workflow profile. The point is to prevent simple talking-head edits and small animations from being forced through the full long-video clipping machinery.
+
+| Profile | Use when | Minimum gates | Skip by default |
+| --- | --- | --- | --- |
+| `lightweight-talking-head` | One selected口播 / talking-head source; user mostly needs cleanup, subtitles, cover, or export | platform, target duration, keep/remove requirements, subtitle style, cover title | candidate pool, full story arc, references, heavy handoff |
+| `simple-animation` | Short explainer, text animation, UI/data animation, or voiceover-driven clip without long source selection | core message, duration/aspect, voiceover path, visual style, 3-8 scene storyboard | source candidate windows, ASR window search, heavy review workflow |
+| `standard-clipping` | Long livestream/interview/course/podcast needs topic extraction or story editing | full basic brief, source state, candidate pool, story arc, subtitle/PIP plan | only skip references if style is inherited from an existing project |
+| `heavy-collab` | Multi-version delivery, teammate handoff, high-stakes publish, many assets, or unclear transcript coverage | all gates plus version/review/QA contract | nothing important; document open questions |
+
+If unsure between two profiles, choose the lighter profile unless it would risk a wrong story selection. Escalate from lightweight to standard only when the user asks for structural story editing, multi-clip selection, or a reusable handoff project.
+
 ## Gate 1: Basic Brief
 
 A cut plan is not ready until these are explicit or inferable from existing files:

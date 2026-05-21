@@ -43,6 +43,24 @@ Before doing production work, inspect the project folder and classify the reques
 
 Do not restart the full workflow when the user is clearly iterating. Read existing notes first, then touch only the affected planning surface.
 
+## Flow Weight Check
+
+Before applying the full story gates, choose the lightest workflow profile that can safely finish the user's job:
+
+1. `lightweight-talking-head`: one main talking-head or口播 video, usually short or already selected. Use for trimming filler, cleaning pacing, subtitles, simple cover, and direct export. Ask only for platform/duration, keep-remove requirements, subtitle style, and cover title when missing. Skip candidate pool and full storyboard unless the user asks.
+2. `simple-animation`: no long source selection; the user wants a short text/data/UI animation, explainer, or voiceover-driven clip. Ask for core message, duration/aspect, voiceover path, and visual style. Create a 3-8 scene storyboard, not a livestream cut plan.
+3. `standard-clipping`: long livestream, interview, course, podcast, or topic extraction from a larger source. Use candidate windows, story arc, subtitle plan, visual plan, and QA.
+4. `heavy-collab`: multi-version, teammate handoff, high-stakes publishing, multiple assets, or unclear source coverage. Use the full gate set, project contract, version log, and review workflow.
+
+Default routing:
+
+- If the user says 口播 / 对镜 / 帮我剪掉废话 / 加字幕 / 出封面, start with `lightweight-talking-head`.
+- If the user says 简单动画 / 文字动画 / 做个视频说明 / 配音加画面, start with `simple-animation`.
+- If the user says 长直播 / 访谈切片 / 课程切片 / 从几个小时里挑 / 剪几条强短视频, start with `standard-clipping`.
+- If the user says 给同事交接 / 多版本 / 完整工程 / 要做流程沉淀, start with `heavy-collab`.
+
+Only ask a routing question when two profiles would change the work materially. Otherwise choose the lighter safe profile and record it in `project.yaml`.
+
 ## Story Spec Gates
 
 Read `references/story-spec-and-gates.md` before creating or changing a cut plan.

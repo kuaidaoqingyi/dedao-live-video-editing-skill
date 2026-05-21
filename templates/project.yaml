@@ -8,6 +8,8 @@ project:
 
 planning:
   mode: "new-edit" # new-edit | continue-edit | iteration | single-surface
+  flow_profile: "standard-clipping" # lightweight-talking-head | simple-animation | standard-clipping | heavy-collab
+  flow_profile_reason: ""
   gates_checked: false
   latest_cut_plan: "cut-plan.md"
   brief_ready: false

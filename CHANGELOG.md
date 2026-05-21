@@ -2,6 +2,18 @@
 
 All notable changes to this skill are tracked here.
 
+## [0.3.1] - 2026-05-21
+
+### Added
+
+- Added a front-loaded flow weight check to route simple口播 edits and simple animation requests away from the full clipping workflow.
+- Added workflow profiles: `lightweight-talking-head`, `simple-animation`, `standard-clipping`, and `heavy-collab`.
+- Added `flow_profile` and `flow_profile_reason` fields to `templates/project.yaml`.
+
+### Changed
+
+- Clarified that full story gates are only mandatory for standard clipping or heavy collaboration work.
+
 ## [0.3.0] - 2026-05-21
 
 ### Added
